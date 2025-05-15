@@ -1,0 +1,35 @@
+name: Publish Windows Installer
+
+on:
+  push:
+    tags:
+      - 'v*'   # 只在 tag push 时触发，如 v1.0.0
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'  # 根据你的项目选择版本
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build and publish
+      run: dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
+
+    - name: Zip published files
+      run: Compress-Archive -Path ./bin/Release/net7.0/win-x64/publish/* -DestinationPath ./output.zip
+
+    - name: Upload to GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: output.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
