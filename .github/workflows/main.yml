@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'   # 只在 tag push 时触发，如 v1.0.0
 
+permissions:
+  contents: write  # ✅ 关键：给 GITHUB_TOKEN 写权限以创建 Release
+
 jobs:
   build:
     runs-on: windows-latest
