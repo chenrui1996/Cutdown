@@ -42,7 +42,6 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             settingToolStripMenuItem = new ToolStripMenuItem();
             RefreshToolStripMenuItem = new ToolStripMenuItem();
-            OpenFolderToolStripMenuItem = new ToolStripMenuItem();
             CloseStripMenuItem1 = new ToolStripMenuItem();
             flowLayoutPanel1 = new FlowLayoutPanel();
             contextMenuStrip1.SuspendLayout();
@@ -160,35 +159,28 @@
             // contextMenuStrip1
             // 
             contextMenuStrip1.ImageScalingSize = new Size(20, 20);
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { settingToolStripMenuItem, RefreshToolStripMenuItem, OpenFolderToolStripMenuItem, CloseStripMenuItem1 });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { settingToolStripMenuItem, RefreshToolStripMenuItem, CloseStripMenuItem1 });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(154, 100);
+            contextMenuStrip1.Size = new Size(139, 76);
             // 
             // settingToolStripMenuItem
             // 
             settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            settingToolStripMenuItem.Size = new Size(153, 24);
+            settingToolStripMenuItem.Size = new Size(138, 24);
             settingToolStripMenuItem.Text = "设置";
             settingToolStripMenuItem.Click += settingToolStripMenuItem_Click;
             // 
             // RefreshToolStripMenuItem
             // 
             RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem";
-            RefreshToolStripMenuItem.Size = new Size(153, 24);
+            RefreshToolStripMenuItem.Size = new Size(138, 24);
             RefreshToolStripMenuItem.Text = "刷新";
             RefreshToolStripMenuItem.Click += RefreshToolStripMenuItem_Click;
-            // 
-            // OpenFolderToolStripMenuItem
-            // 
-            OpenFolderToolStripMenuItem.Name = "OpenFolderToolStripMenuItem";
-            OpenFolderToolStripMenuItem.Size = new Size(153, 24);
-            OpenFolderToolStripMenuItem.Text = "打开文件夹";
-            OpenFolderToolStripMenuItem.Click += OpenFolderToolStripMenuItem_Click;
             // 
             // CloseStripMenuItem1
             // 
             CloseStripMenuItem1.Name = "CloseStripMenuItem1";
-            CloseStripMenuItem1.Size = new Size(153, 24);
+            CloseStripMenuItem1.Size = new Size(138, 24);
             CloseStripMenuItem1.Text = "关闭窗口";
             CloseStripMenuItem1.Click += CloseStripMenuItem1_Click;
             // 
@@ -256,7 +248,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem RefreshToolStripMenuItem;
         private ToolStripMenuItem dToolStripMenuItem;
-        private ToolStripMenuItem OpenFolderToolStripMenuItem;
         private ToolStripMenuItem CloseStripMenuItem1;
         private ToolStripMenuItem settingToolStripMenuItem;
         private FlowLayoutPanel flowLayoutPanel1;
