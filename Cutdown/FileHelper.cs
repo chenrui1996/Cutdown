@@ -52,7 +52,7 @@ namespace Cutdown
                 return;
             }
             var url = exeDir + SettingUrl;
-            var data = JsonConvert.SerializeObject(new { Description = description, TargetDate = targetDate.ToString("yyyy/MM/dd hh:mm:ss") });
+            var data = JsonConvert.SerializeObject(new { Description = description, TargetDate = targetDate.ToString("yyyy/MM/dd HH:mm:ss") });
             new FileHelper().WriteAllText(url, data);
         }
 
