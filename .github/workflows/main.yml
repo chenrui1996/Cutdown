@@ -25,7 +25,7 @@ jobs:
       run: dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true
 
     - name: Zip published files
-      run: Compress-Archive -Path ./bin/Release/net7.0/win-x64/publish/* -DestinationPath ./output.zip
+      run: Compress-Archive -Path ./bin/Release/net8.0/win-x64/publish/* -DestinationPath ./output.zip
 
     - name: Upload to GitHub Release
       uses: softprops/action-gh-release@v1
